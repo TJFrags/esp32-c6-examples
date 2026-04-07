@@ -16,10 +16,10 @@ This document combines:
 
 ## 1) Repository layout
 
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/01_factory`
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/02_sd_card_test`
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/03_lvgl_example` ✅ main LVGL demo flow
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/04_lvgl_image` ✅ LVGL image rendering flow
+- `./01_factory`
+- `./02_sd_card_test`
+- `./03_lvgl_example` ✅ main LVGL demo flow
+- `./04_lvgl_image` ✅ LVGL image rendering flow
 
 The LVGL/display-related components are duplicated in `03_lvgl_example/components` and `04_lvgl_image/components`.
 
@@ -87,8 +87,8 @@ The flow below matches `03_lvgl_example/main/main.c` and `04_lvgl_image/main/mai
 
 Use either:
 
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/03_lvgl_example`
-- `/home/runner/work/esp32-c6-examples/esp32-c6-examples/04_lvgl_image`
+- `./03_lvgl_example`
+- `./04_lvgl_image`
 
 ### Step 3: Set target
 
@@ -466,7 +466,7 @@ Check ESP-IDF and component package docs for full argument details and version-s
 Example:
 
 ```bash
-cd /home/runner/work/esp32-c6-examples/esp32-c6-examples/03_lvgl_example
+cd ./03_lvgl_example
 idf.py set-target esp32c6
 idf.py build
 idf.py -p <PORT> flash monitor
@@ -475,7 +475,7 @@ idf.py -p <PORT> flash monitor
 For image rendering example:
 
 ```bash
-cd /home/runner/work/esp32-c6-examples/esp32-c6-examples/04_lvgl_image
+cd ./04_lvgl_image
 idf.py set-target esp32c6
 idf.py build
 idf.py -p <PORT> flash monitor
@@ -513,4 +513,3 @@ idf.py -p <PORT> flash monitor
 
 - `03_lvgl_example` and `04_lvgl_image` currently include similar driver/component copies.
 - If you update one component copy, apply the same change to the other to keep examples consistent.
-
