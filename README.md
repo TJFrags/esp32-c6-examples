@@ -407,30 +407,7 @@ This section documents public, callable functions declared in component headers.
 
 ---
 
-## 6.4 LVGL UI helper APIs (`lvgl_ui`)
-
-### `void lvgl_ui_init(void)`
-
-- **Defined in:** `components/lvgl_ui/lvgl_ui.h`
-- **Purpose:** Build repository-provided tileview UI on current LVGL screen.
-- **Use when:** after LVGL display/input setup and inside LVGL lock.
-
-### Tile initialization helpers
-
-All are defined under `components/lvgl_ui/tileview/*.h` and each builds content into a tile/container parent:
-
-- `void rgb_tile_init(lv_obj_t *parent)`
-- `void system_tile_init(lv_obj_t *parent)`
-- `void qmi8658_tile_init(lv_obj_t *parent)`
-- `void camera_tile_init(lv_obj_t *parent)`
-- `void wifi_tile_init(lv_obj_t *parent)`
-- `void image_tile_init(lv_obj_t *parent)`
-
-Use them from your custom `lv_tileview` composition flow.
-
----
-
-## 7) External APIs used in the main bring-up (important)
+## 6.4 External APIs used in the main bring-up (important)
 
 These are not defined in local components but are central to usage:
 
@@ -445,7 +422,7 @@ Check ESP-IDF and component package docs for full argument details and version-s
 
 ---
 
-## 8) Typical initialization order (recommended)
+## 7) Typical initialization order (recommended)
 
 1. `nvs_flash_init`
 2. `bsp_i2c_init`
@@ -461,7 +438,7 @@ Check ESP-IDF and component package docs for full argument details and version-s
 
 ---
 
-## 9) Build and flash
+## 8) Build and flash
 
 Example:
 
@@ -483,7 +460,7 @@ idf.py -p <PORT> flash monitor
 
 ---
 
-## 10) Troubleshooting
+## 9) Troubleshooting
 
 ### Screen stays black
 
@@ -509,7 +486,7 @@ idf.py -p <PORT> flash monitor
 
 ---
 
-## 11) Notes
+## 10) Notes
 
 - `03_lvgl_example` and `04_lvgl_image` currently include similar driver/component copies.
 - If you update one component copy, apply the same change to the other to keep examples consistent.
